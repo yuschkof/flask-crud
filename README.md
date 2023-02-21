@@ -18,8 +18,7 @@
 Примечания:
   1. Под открытым API мы понимаем сайт https://api.stackexchange.com/docs/search
   Пример запроса: 
-  https://api.stackexchange.com/2.3/search?page=1&fromdate=1609459200&todate
-  =1640995200&order=desc&sort=activity&tagged=python&site=stackoverflow
+  https://api.stackexchange.com/2.3/search?page=1&fromdate=1609459200&todate=1640995200&order=desc&sort=activity&tagged=python&site=stackoverflow
   2. Генератор форм должен быть вида:
       | Creation date | Title | Author | Answered? | Link |
       | --- | --- | --- | --- | --- | 
