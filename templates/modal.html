@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block modal %}
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Вы хотите очистить базу данных?</h1>
+        </div>
+        <div class="modal-footer">
+          <a href="{{ url_for('home')}}" class="btn btn-secondary" role="button">Назад</a>
+          <a href="{{ url_for('delete_table')}}" class="btn btn-success" role="button">Да</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block script %}
+<script>
+    $(document).ready(function(){
+        console.log("deleted..")
+        $("#exampleModal").modal("show")
+    })
+</script>
+{% endblock %}

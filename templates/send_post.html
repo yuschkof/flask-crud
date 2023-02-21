@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col">
+                <form action="{{ url_for('table_post') }}" method="post">
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Номер страницы</label>
+                        <input type="text" class="form-control" name="page" required/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">От какой даты</label>
+                        <input placeholder="01/12/2019" type="date" class="form-control" name="from_date" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">До какой даты</label>
+                        <input placeholder="01/12/2020" type="date" class="form-control" name="to_date" required/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Тэги</label>
+                        <input placeholder="python" type="text" class="form-control" name="tagged" required/>
+                    </div>
+                    <a href="{{ url_for('home')}}" class="btn btn-secondary" role="button">Back</a>
+                    <button type="submit" class="btn btn-success">Send Post</button>
+                </form>
+            </div>
+            <div class="col">
+            </div>
+          </div>
+    </div>
+{% endblock %}
