@@ -1,6 +1,5 @@
 from datetime import datetime
-
-from api.data.connection import db_connection
+from connection import db_connection
 
 
 def get_data():
